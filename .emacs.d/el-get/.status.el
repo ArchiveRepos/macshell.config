@@ -5,6 +5,8 @@
 	 (:name el-get :website "https://github.com/dimitri/el-get#readme" :description "Manage the external elisp bits and pieces you depend upon." :type github :branch "master" :pkgname "dimitri/el-get" :info "." :load "el-get.el"))
  (fuzzy status "installed" recipe
 	(:name fuzzy :website "https://github.com/auto-complete/fuzzy-el" :description "Fuzzy matching utilities for GNU Emacs" :type github :pkgname "auto-complete/fuzzy-el"))
+ (icicles status "installed" recipe
+	  (:name icicles :auto-generated t :type emacswiki :description "Minibuffer input completion and cycling." :website "https://raw.github.com/emacsmirror/emacswiki.org/master/icicles.el"))
  (org status "installed" recipe
       (:name org :auto-generated t :type emacswiki :description "Carsten's outline mode for keeping track of everything." :website "https://raw.github.com/emacsmirror/emacswiki.org/master/org.el"))
  (popup status "installed" recipe

@@ -96,18 +96,58 @@ Display a list of packages.
 
 ;;;***
 
+;;;### (autoloads (org-diary org-mode) "org/org" "org/org.el" (21234
+;;;;;;  56270 0 0))
+;;; Generated autoloads from org/org.el
+
+(autoload 'org-mode "org/org" "\
+Carsten's special outline mode for keeping notes about everything.
+
+\(fn)" t nil)
+
+(autoload 'org-diary "org/org" "\
+Returns diary information from an org-file.
+This function can be used in an \"sexp\" diary entry in the Emacs calendar.
+It accesses an org file and extracts information from that file to be
+listed in the diary.  The function accepts arguments specifying what
+items should be listed.  The following arguments are allowed:
+
+   :timestamp    List the headlines of items containing a date stamp or
+                 date range matching the selected date.  Deadlines will
+                 also be listed, on the expiration day.
+
+   :deadline     List any deadlines past due, or due within
+                 `org-deadline-warning-days'.  The listing occurs only
+                 in the diary for *today*, not at any other date.
+
+   :todo         List all TODO items from the org-file.  This may be a
+                 long list - so this is not turned on by default.
+                 Like deadlines, these entires only show up in the
+                 diary for *today*, not at any other date.
+
+The call in the diary file should look like this:
+
+   &%%(org-diary) ~/path/to/some/orgfile.org
+
+Use a separate line for each org file to check.
+
+If you don't give any arguments (as in the example above), the default
+arguments (:timestamp :deadline) are used.  So the example above may
+also be written as
+
+   &%%(org-diary :timestamp :deadline) ~/path/to/some/orgfile.org
+
+\(fn &rest ARGS)" nil nil)
+
+;;;***
+
 ;;;### (autoloads nil nil ("auto-complete/auto-complete-config.el"
 ;;;;;;  "auto-complete/auto-complete-pkg.el" "el-get/el-get-autoloads.el"
 ;;;;;;  "el-get/el-get-build.el" "el-get/el-get-byte-compile.el"
 ;;;;;;  "el-get/el-get-core.el" "el-get/el-get-custom.el" "el-get/el-get-dependencies.el"
 ;;;;;;  "el-get/el-get-install.el" "el-get/el-get-methods.el" "el-get/el-get-notify.el"
-;;;;;;  "el-get/el-get-recipes.el" "el-get/el-get-status.el" "emacs-w3m/mew-w3m.el"
-;;;;;;  "emacs-w3m/w3m-bug.el" "emacs-w3m/w3m-ccl.el" "emacs-w3m/w3m-ems.el"
-;;;;;;  "emacs-w3m/w3m-favicon.el" "emacs-w3m/w3m-hist.el" "emacs-w3m/w3m-image.el"
-;;;;;;  "emacs-w3m/w3m-load.el" "emacs-w3m/w3m-mail.el" "emacs-w3m/w3m-proc.el"
-;;;;;;  "emacs-w3m/w3m-rss.el" "emacs-w3m/w3m-tabmenu.el" "emacs-w3m/w3m-ucs.el"
-;;;;;;  "emacs-w3m/w3m-util.el" "emacs-w3m/w3m-xmas.el" "emacs-w3m/w3mhack.el"
-;;;;;;  "fuzzy/fuzzy.el" "popup/popup.el") (21234 52198 342012 0))
+;;;;;;  "el-get/el-get-recipes.el" "el-get/el-get-status.el" "fuzzy/fuzzy.el"
+;;;;;;  "popup/popup.el") (21234 56270 575335 0))
 
 ;;;***
 

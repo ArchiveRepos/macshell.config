@@ -96,6 +96,29 @@ Display a list of packages.
 
 ;;;***
 
+;;;### (autoloads nil "icicles/icicles" "icicles/icicles.el" (21235
+;;;;;;  324 0 0))
+;;; Generated autoloads from icicles/icicles.el
+ (autoload 'icy-mode    "icicles" "Toggle Icicle mode - see `icicle-mode'." t nil)
+ (autoload 'icicle-mode "icicles" 
+"Icicle mode: Toggle minibuffer input completion and cycling.
+ Non-nil prefix ARG turns mode on if ARG > 0, else turns it off.
+ Icicle mode is a global minor mode.  It binds keys in the minibuffer.
+ \ 
+ For more information, use `\\<minibuffer-local-completion-map>\\[icicle-minibuffer-help]' \
+ when the minibuffer is active.
+ \ 
+ Depending on your platform, if you use Icicles in a text terminal
+ \(that is, without a window system/manager), you might need to change
+ some of the key bindings if some of the default bindings are not
+ available to you.
+ \ 
+ Icicle mode defines many top-level commands.  For a list, see the
+ Commentary headers of files `icicles-cmd1.el' and `icicles-cmd2.el'."
+ t nil)
+
+;;;***
+
 ;;;### (autoloads (org-diary org-mode) "org/org" "org/org.el" (21234
 ;;;;;;  56270 0 0))
 ;;; Generated autoloads from org/org.el
@@ -147,7 +170,7 @@ also be written as
 ;;;;;;  "el-get/el-get-core.el" "el-get/el-get-custom.el" "el-get/el-get-dependencies.el"
 ;;;;;;  "el-get/el-get-install.el" "el-get/el-get-methods.el" "el-get/el-get-notify.el"
 ;;;;;;  "el-get/el-get-recipes.el" "el-get/el-get-status.el" "fuzzy/fuzzy.el"
-;;;;;;  "popup/popup.el") (21234 56270 575335 0))
+;;;;;;  "popup/popup.el") (21235 324 803582 0))
 
 ;;;***
 
