@@ -6,6 +6,14 @@
 ;)
 (add-to-list 'load-path "~/.emacs.d/")
 
+;; correct show ls 
+; can use M-x term instead
+; note: need to use C-c while in term mode
+(ansi-color-for-comint-mode-on)
+
+;; change yes-or-no-p to y-or-n-p
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 ;; Copy from Clipboard
 (setq x-select-enable-clipboard t)
 
@@ -38,4 +46,4 @@
 ;(global-srecode-minor-mode 1) ;Enable template insertion menu
 
 ;; emacs-w3m
-(add-to-list 'exec-path "~/.emacs.d/el-get/emacs-w3m")
+;(add-to-list 'exec-path "~/.emacs.d/el-get/emacs-w3m")
