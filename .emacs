@@ -36,3 +36,6 @@
 ;(global-ede-mode 1) ;Enable the Project management system
 ;(semantic-load-enable-code-helpers) ;Enable prototype help and smart completion
 ;(global-srecode-minor-mode 1) ;Enable template insertion menu
+
+;; emacs-w3m
+(add-to-list 'exec-path "~/.emacs.d/el-get/emacs-w3m")
