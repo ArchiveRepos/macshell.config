@@ -14,7 +14,8 @@ ZSH_THEME="robbyrussell"
 alias cls='clear'
 alias ll='ls -l'
 alias la='ls -a'
-alias ema='emacs'
+alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
+alias ema='emacs --debug-init'
 alias grep='grep --color=auto'
 
 alias -s js=ema
