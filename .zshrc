@@ -17,6 +17,7 @@ alias la='ls -a'
 alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
 alias ema='emacs --debug-init'
 alias grep='grep --color=auto'
+alias comp='tar -zcvpf'
 
 alias -s js=ema
 alias -s java=ema

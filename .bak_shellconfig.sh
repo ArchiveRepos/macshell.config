@@ -12,5 +12,5 @@ cp .bash_profile macshell.config
 
 # emacs config
 cp .emacs macshell.config
-cp -r .emacs.d macshell.config
+#cp -r .emacs.d macshell.config
 tar -zcvpf macshell.config/emacs.d.tar.gz .emacs.d/
