@@ -13,4 +13,8 @@ cp .bash_profile macshell.config
 # emacs config
 cp .emacs macshell.config
 #cp -r .emacs.d macshell.config
-tar -zcvpf macshell.config/emacs.d.tar.gz .emacs.d/
+if diff -r <(tar -tzf ./macshell.config/emacs.d.tar.gz) .emacs.d/
+then # do nothing if the files are same
+else 
+    tar -zcvpf macshell.config/emacs.d.tar.gz .emacs.d/
+fi
