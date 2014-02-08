@@ -15,9 +15,12 @@ alias cls='clear'
 alias ll='ls -l'
 alias la='ls -a'
 alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
+alias vim='/usr/local/Cellar/vim/7.4.052/bin/vim'
 alias ema='emacs --debug-init'
+alias vi='vim'
 alias grep='grep --color=auto'
 alias comp='tar -zcvpf'
+alias gitclean='git gc --aggressive --prune=now'
 
 alias -s js=ema
 alias -s java=ema

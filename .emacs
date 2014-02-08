@@ -2,6 +2,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/elisp/")
+(add-to-list 'exec-path "/usr/local/bin")
 
 ;; load theme
 (add-to-list 'load-path "~/.emacs.d/theme/")
@@ -69,7 +70,16 @@
       w3m-output-coding-system 'utf-8
       w3m-terminal-coding-system 'utf-8)
 ; start page
-(setq w3m-home-page "http://www.google.com")
+(setq w3m-home-page "http://www.emacswiki.org")
+
+;; setup skewer-mode
+(add-hook 'js2-mode-hook 'skewer-mode)
+(add-hook 'css-mode-hook 'skewer-css-mode)
+(add-hook 'html-mode-hook 'skewer-html-mode)
+
+;; set default browers 
+(setq browse-url-browser-function 'browse-url-default-macosx-browser)
+
 ; display pics 
 ; seems not working under terminal mode (-nw)
 (setq w3m-default-display-inline-images t)
@@ -77,7 +87,7 @@
 ; using cookies
 (setq w3m-command-arguments '("-cookie" "-F"))
 (setq w3m-use-cookies t)
-(setq browse-url-browser-function 'w3m-browse-url)
+;(setq browse-url-browser-function 'w3m-browse-url) ;set default browser
 (setq w3m-view-this-url-new-session-in-background t)
 
 ;; add keyfreq to monitor which keys used frequently
@@ -89,6 +99,12 @@
 ;;set ido-mode default open
 (require 'ido)
 (ido-mode 1)
+
+;;set undo-tree
+(undo-tree-mode 1)
+
+;;set icicles
+(icy-mode 1)
 
 ;;set yasnippet
 (require 'yasnippet)
