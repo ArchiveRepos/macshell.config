@@ -1,10 +1,14 @@
 ;; Emacs Configuration
 
-;; Set custom variables
-;(custom-set-variables
-;  '(user-emacs-directory "~/.emacs.d/")
-;)
 (add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/elisp/")
+
+;; load theme
+(add-to-list 'load-path "~/.emacs.d/theme/")
+;(load-theme 'molokai-theme t)
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-euphoria)
 
 ;; correct show ls 
 ; can use M-x term instead
