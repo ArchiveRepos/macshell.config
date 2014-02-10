@@ -11,6 +11,19 @@
 (color-theme-initialize)
 (color-theme-euphoria)
 
+;; set MELPA
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(package-initialize)
+(unless package-archive-contents (package-refresh-contents))
+
+;; set SuperCollider scel
+(setenv "PATH" (concat (getenv "PATH") ":/Applications/SuperCollider:/Applications/SuperCollider/SuperCollider.app/Contents/Resources"))
+(setq exec-path (append exec-path '("/Applications/SuperCollider"  "/Applications/SuperCollider/SuperCollider.app/Contents/Resources" )))
+(add-to-list 'load-path "~/.emacs.d/elisp/scel")
+(require 'sclang)
+(add-hook 'sclang-mode-hook 'sclang-extensions-mode)
+
 ;; correct show ls 
 ; can use M-x term instead
 ; note: need to use C-c while in term mode
@@ -26,8 +39,8 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; set keys
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;(global-set-key (kbd "M-x") 'smex)
+;(global-set-key (kbd "M-X") 'smex-major-mode-commands)
 
 ;; Copy from Clipboard
 (setq x-select-enable-clipboard t)
@@ -97,7 +110,7 @@
 (keyfreq-autosave-mode 1)
 
 ;;set ido-mode default open
-(require 'ido)
+;(require 'ido)
 (ido-mode 1)
 
 ;;set undo-tree
@@ -106,8 +119,11 @@
 ;;set icicles
 (icy-mode 1)
 
+;;set icomplete+
+(icomplete-mode 1)
+
 ;;set yasnippet
-(require 'yasnippet)
+;(require 'yasnippet)
 (yas-global-mode 1)
 
 ;;set nyan-mode
