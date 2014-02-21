@@ -4,12 +4,22 @@
 (add-to-list 'load-path "~/.emacs.d/elisp/")
 (add-to-list 'exec-path "/usr/local/bin")
 
+;; set TRAMP which allow use remote edit files
+(require 'tramp)
+(setq tramp-default-method "ssh")
+(setq tramp-shell-prompt-pattern "^[^$>\n]*[#$%>] *\\(\[[0-9;]*[a-zA-Z] *\\)*")
+
 ;; load theme
 (add-to-list 'load-path "~/.emacs.d/theme/")
 ;(load-theme 'molokai-theme t)
 (require 'color-theme)
 (color-theme-initialize)
 (color-theme-euphoria)
+
+;; add the Evil mode for VIM key-binding
+(add-to-list 'load-path "~/.emacs.d/elisp/evil")
+(require 'evil)
+(evil-mode 1)
 
 ;; set MELPA
 (require 'package)
@@ -39,8 +49,8 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; set keys
-;(global-set-key (kbd "M-x") 'smex)
-;(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
 
 ;; Copy from Clipboard
 (setq x-select-enable-clipboard t)
@@ -150,6 +160,7 @@
  '(global-auto-complete-mode t)
  '(global-linum-mode t)
  '(global-visual-line-mode t)
+ '(inhibit-startup-screen t)
  '(keyfreq-autosave-mode t)
  '(mouse-avoidance-mode (quote exile) nil (avoid))
  '(tool-bar-mode nil)
